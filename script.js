@@ -1,6 +1,7 @@
-function volume_sphere() {
+function volume_sphere(e) {
     //Write your code here
-	let radius = document.getElementById("radius").value;
+	e.preventDefault();
+	let radius = parseFloat(document.getElementById("radius").value);
 	let volume = document.getElementById("volume");
 	if(radius < 0 || isNaN(radius)){
 		volume.value = NaN;
